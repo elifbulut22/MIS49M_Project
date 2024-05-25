@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailsActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.travelbook.DetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/cityNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="11dp"
+            android:ems="10"
+            android:hint="City Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/countryNameText"
+            app:layout_constraintEnd_toEndOf="@+id/countryNameText" />
+
+        <EditText
+            android:id="@+id/countryNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Country Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/travelDetailsText"
+            app:layout_constraintStart_toStartOf="@+id/travelDetailsText" />
+
+        <EditText
+            android:id="@+id/travelDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginBottom="194dp"
+            android:ems="10"
+            android:hint="Travel Details"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="save"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/travelDetailsText"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
